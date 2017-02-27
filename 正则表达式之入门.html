@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则表达式之入门</title>
+</head>
+<body>
+
+<div>
+	<input type="text" id="phone" />
+	<button onclick="alert(isPhoneNum(document.getElementById('phone').value))">手机号监测</button>
+</div>
+
+<div>
+	<input type="text" id="words" />
+	<button onclick="alert(isDupWord(document.getElementById('words').value))">重复单侧监测</button>
+</div>
+
+<script type="text/javascript">
+function isPhoneNum(number){
+	return /(13|14|15|18)[0-9]{9}/.test(number);
+}
+
+function isDupWord(str){
+	return /(\w+) \1/.test(str);
+}
+</script>
+</body>
+</html>
